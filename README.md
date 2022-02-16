@@ -9,6 +9,16 @@ Click the image to watch the demo video.
 
 # Setup
 
+1. Open a terminal in Ubuntu. Type the following command to install networking tools for Ubuntu
+```
+sudo apt install net-tools
+```
+Now we can check the IP address of Ubuntu with the following command
+```
+sudo ifconfig
+```
+
+2. 
 Update the file `wifi_credentials.h` with your SSID and PASSWORD.
 
 ```c
