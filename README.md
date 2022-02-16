@@ -18,7 +18,14 @@ Now we can check the IP address of Ubuntu with the following command
 sudo ifconfig
 ```
 
-2. 
+2. Clone this GitHub project within a folder.
+
+For example, the following commands clone the GitHub project to ~/home/iot/Documents
+
+```
+cd ~/Documents
+git clone
+
 Update the file `wifi_credentials.h` with your SSID and PASSWORD.
 
 ```c
