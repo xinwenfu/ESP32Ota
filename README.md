@@ -39,20 +39,23 @@ git clone https://github.com/xinwenfu/ota.git
 ```
 # Flashing the board for the first time
 
-5. Compile, upload and run the sketch.
-   - First install will need to be over USB. Our code is written with the functionality of OTA and it shall be flashed into the ESP32 board waiting for later OTA requests.
-   - The firmware flashes the blue LED on the board
+5. Compile the project
+
+6. Upload the firmware USB
+   - First installation of the firmware will need to be over USB. The code is written with the functionality of OTA and it shall be flashed into the ESP32 board running and waiting for later OTA requests.
    - Press the BOOT button (IO0) of the ESP32 board if needed during uploading
 
-6. Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP of the board
+7. The firmware blinks the blue LED on the board
+   - The ESP32 board is ready for upgrading through OTA if the blue LED on the board blinks
+
+8. Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP address of the board
 
 # OTA
 
-7. The ESP32 board is ready for upgrading through OTA if the blue LED on the board blinks
-   - Change the code, e.g, the frequency of the LED light blinking so that we will upload the new firmware to the board
-   - In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
+9. Change the code, e.g, the frequency of the LED light blinking so that we will upload the new firmware to the board
+
+10. In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
    - Optionally, unplug the micro USB cable from the computer and plug it into another USB port 
-   - Compile and upload via OTA. You shall see a different uploading process 
 
 ```
 ; PlatformIO Project Configuration File
@@ -74,6 +77,10 @@ monitor_speed = 115200
 upload_protocol = espota ; Upload via OTA. 
 upload_port = 192.168.1.7 ; Change the IP to IP of the ESP32 board
 ```
+
+9. Compile the project 
+10. Upload the firmware via OTA. You shall see a different uploading process  from the uploading process via USB
+
 
 Notes:
 
