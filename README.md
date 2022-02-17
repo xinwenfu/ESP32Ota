@@ -49,7 +49,7 @@ git clone https://github.com/xinwenfu/ota.git
 # OTA
 
 7. The ESP32 board is ready for upgrading through OTA if the blue LED on the board blinks
-   - Change the code, e.g, the frequency of the LED light blinking
+   - Change the code, e.g, the frequency of the LED light blinking so that we will upload the new firmware to the board
    - In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
    - Optionally, unplug the micro USB cable from the computer and plug it into another USB port 
    - Compile and upload via OTA. You shall see a different uploading process 
