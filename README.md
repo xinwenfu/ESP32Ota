@@ -41,13 +41,14 @@ git clone https://github.com/xinwenfu/ota.git
 
 5. Compile, upload and run the sketch.
    - First install will need to be over USB. Our code is written with the functionality of OTA and it shall be flashed into the ESP32 board waiting for later OTA requests.
-   - Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP of the board
    - The firmware flashes the blue LED on the board
    - Press the BOOT button (IO0) of the ESP32 board if needed during uploading
 
+6. Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP of the board
+
 # OTA
 
-6. The ESP32 board is ready for upgrading through OTA if the blue LED on the board blinks
+7. The ESP32 board is ready for upgrading through OTA if the blue LED on the board blinks
    - Change the code, e.g, the frequency of the LED light blinking
    - In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
    - Optionally, unplug the micro USB cable from the computer and plug it into another USB port 
