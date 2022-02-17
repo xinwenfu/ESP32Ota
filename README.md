@@ -1,4 +1,4 @@
-# OTA via BLE on ESP32
+# OTA via WiFi on ESP32
 
 This project demonstrates how to use the Over The Air (OTA) update system on an ESP32 board.
 
