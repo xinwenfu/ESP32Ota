@@ -1,7 +1,5 @@
 # OTA via BLE on ESP32
 
-# Introduction
-
 This project demonstrates how to use the Arduino Over The Air update system on an ESP32.
 
 
@@ -39,12 +37,15 @@ git clone https://github.com/xinwenfu/ota.git
 #define SSID "YOUR_SSID"
 #define PASSWORD "YOUR_PASSWORD"
 ```
+# Flashing the board for the first time
 
 5. Compile, upload and run the sketch.
    - First install will need to over USB.
    - Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP of the board
    - The firmware flashes the blue LED on the board
    - Press the BOOT button (IO0) of the ESP32 board if needed during uploading
+
+# OTA
 
 6. The ESP32 board is ready for upgrading through OTA if the blue LED on the board blinks
    - Change the code, e.g, the frequency of the LED light blinking
