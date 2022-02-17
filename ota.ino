@@ -2,6 +2,8 @@
 #define LED_BUILTIN 2
 #include "wifi_credentials.h"
 
+IPAddress ip;
+
 void setup() {
   Serial.begin(115200);
   Serial.printf("Started up\n");
@@ -54,8 +56,13 @@ void setup() {
 
 void loop() {
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(100);                       // wait for a second
+  delay(1000);                       // wait for a second
   digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(100);                       // wait for a second
+  delay(1000);                       // wait for a second
+
+  Serial.printf("IP address of this esp32 board:");
+  ip = WiFi.localIP();
+  Serial.println(ip);
+  
   ArduinoOTA.handle();
 }
