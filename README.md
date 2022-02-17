@@ -1,5 +1,3 @@
-This original project is from https://github.com/atomic14/ESP32Ota.
-
 # Introduction
 
 This project demonstrates how to use the Arduino Over The Air update system on an ESP32.
@@ -74,7 +72,8 @@ upload_port = 192.168.1.7 ; Change the IP to IP of the ESP32 board
 ```
 
 Notes:
-Click the image to watch the original demo video.
+This project is based on https://github.com/atomic14/ESP32Ota.
+Click the image to watch the original demo video with Arduino IDE.
 
 [![Demo Video](https://img.youtube.com/vi/_bMsrxiyuHs/0.jpg)](https://www.youtube.com/watch?v=_bMsrxiyuHs)
 
