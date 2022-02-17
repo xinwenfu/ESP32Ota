@@ -30,7 +30,7 @@ git clone https://github.com/xinwenfu/ota.git
    - Click QUICK ACCESS -> PIO Home -> Open
    - Click *Import Arduino Project*
    - Select a board: Espressif ESP32 Dev Module
-   - Choose a directory with existing Arduino IDE project: Palces -> iot -> Documents -> ota
+   - Choose a directory with existing Arduino IDE project: Places -> iot -> Documents -> ota
    - Click the button *Import*
 
 4. Update the file `wifi_credentials.h` with your SSID and PASSWORD.
