@@ -4,7 +4,7 @@ This project demonstrates how to use the Over The Air (OTA) update system on an 
 
 
 # Setup
-0. Change Ubuntu VM to use the briadged adaptor
+0. If needed, Change Ubuntu VM to use the briadged adaptor
 
 1. If needed, open a terminal in Ubuntu. Type the following command to install networking tools for Ubuntu
 ```
