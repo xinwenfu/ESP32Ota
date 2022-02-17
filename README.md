@@ -18,7 +18,7 @@ sudo ifconfig
 
 2. Clone this GitHub project within a folder at the Ubuntu VM.
 
-For example, the following commands clone the GitHub project to ~/home/iot/Documents
+For example, the following commands in a terminal clone the GitHub project to ~/home/iot/Documents
 
 ```
 cd ~/Documents
