@@ -40,7 +40,7 @@ git clone https://github.com/xinwenfu/ota.git
 # Flashing the board for the first time
 
 5. Compile, upload and run the sketch.
-   - First install will need to over USB.
+   - First install will need to over USB. Our code is written with the functionality of OTA and it shall be flashed into the ESP32 board waiting for later OTA requests.
    - Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP of the board
    - The firmware flashes the blue LED on the board
    - Press the BOOT button (IO0) of the ESP32 board if needed during uploading
