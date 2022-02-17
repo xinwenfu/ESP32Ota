@@ -76,6 +76,7 @@ upload_port = 192.168.1.7 ; Change the IP to IP of the ESP32 board
 ```
 
 Notes:
+
 This project is based on https://github.com/atomic14/ESP32Ota.
 Click the image to watch the original demo video with Arduino IDE.
 
