@@ -5,7 +5,7 @@ This project demonstrates how to use the Over The Air (OTA) update system on an 
 
 # Setup
 
-1. Open a terminal in Ubuntu. Type the following command to install networking tools for Ubuntu
+1. If needed, open a terminal in Ubuntu. Type the following command to install networking tools for Ubuntu
 ```
 sudo apt install net-tools
 ```
