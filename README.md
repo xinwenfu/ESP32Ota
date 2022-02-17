@@ -1,11 +1,9 @@
-This project is from https://github.com/atomic14/ESP32Ota.
+This original project is from https://github.com/atomic14/ESP32Ota.
 
 # Introduction
 
 This project demonstrates how to use the Arduino Over The Air update system on an ESP32.
-Click the image to watch the demo video.
 
-[![Demo Video](https://img.youtube.com/vi/_bMsrxiyuHs/0.jpg)](https://www.youtube.com/watch?v=_bMsrxiyuHs)
 
 # Setup
 
@@ -45,19 +43,14 @@ git clone https://github.com/xinwenfu/ota.git
 5. Compile, upload and run the sketch.
    - First install will need to over USB.
    - Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP of the board
-   - The firmware also flashes the blue LED on the board
+   - The firmware flashes the blue LED on the board
+   - Press the BOOT button (IO0) of the ESP32 board if needed during uploading
 
-
-Once the sketch is running you can go to "Tools" -> "Ports" and you should find your ESP32 listed as "esp_test".
-
-You can change the name of your device by changing this line of code:
-
-```
-ArduinoOTA.setHostname("esp_test");
-```
-
-# OTA in pio
-In pio, we need to specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. This example uses the Arduino library installed by Arduino IDE. But really pay attention to the last two lines.
+6. The ESP32 board is ready for upgrading through OTA if the blue LED on the board blinks
+   - Change the code, e.g, the frequency of the LED light blinking
+   - In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
+   - Optionally, unplug the micro USB cable from the computer and plug it into another USB port 
+   - Compile and upload via OTA. You shall see a different uploading process 
 
 ```
 ; PlatformIO Project Configuration File
@@ -74,9 +67,18 @@ In pio, we need to specify the upload_protocol and upload_port, which is the ip 
 platform = espressif32
 board = esp32dev
 framework = arduino
-lib_extra_dirs = ~/Documents/Arduino/libraries
 monitor_speed = 115200
 
-upload_protocol = espota
-upload_port = 192.168.1.18
+upload_protocol = espota ; Upload via OTA. 
+upload_port = 192.168.1.7 ; Change the IP to IP of the ESP32 board
 ```
+
+Notes:
+Click the image to watch the original demo video.
+[![Demo Video](https://img.youtube.com/vi/_bMsrxiyuHs/0.jpg)](https://www.youtube.com/watch?v=_bMsrxiyuHs)
+
+In the Arduino IDE, once the sketch is running you can go to "Tools" -> "Ports" and you should find your ESP32 listed as "esp_test". You can change the name of your device by changing this line of code:
+```
+ArduinoOTA.setHostname("esp_test");
+```
+
