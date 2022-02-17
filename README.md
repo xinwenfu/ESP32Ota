@@ -18,30 +18,41 @@ Now we can check the IP address of Ubuntu with the following command
 sudo ifconfig
 ```
 
-2. Clone this GitHub project within a folder.
+2. Clone this GitHub project within a folder at the Ubuntu VM.
 
 For example, the following commands clone the GitHub project to ~/home/iot/Documents
 
 ```
 cd ~/Documents
-git clone
+git clone https://github.com/xinwenfu/ota.git
+```
 
-Update the file `wifi_credentials.h` with your SSID and PASSWORD.
+3. Open VS Code and import this GitHub project, which is an Arduino project
+   - Click the PlatformIO icon
+   - Click QUICK ACCESS -> PIO Home -> Open
+   - Click *Import Arduino Project*
+   - Select a board: Espressif ESP32 Dev Module
+   - Choose a directory with existing Arduino IDE project: Palces -> iot -> Documents -> ota
+   - Click the button *Import*
 
-```c
+4. Update the file `wifi_credentials.h` with your SSID and PASSWORD.
+
+```
 #define SSID "YOUR_SSID"
 #define PASSWORD "YOUR_PASSWORD"
 ```
 
-Now just compile and run the sketch.
+5. Compile, upload and run the sketch.
+   - First install will need to over USB.
+   - Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP of the board
+   - The firmware also flashes the blue LED on the board
 
-The first install will need to over USB.
 
 Once the sketch is running you can go to "Tools" -> "Ports" and you should find your ESP32 listed as "esp_test".
 
 You can change the name of your device by changing this line of code:
 
-```c
+```
 ArduinoOTA.setHostname("esp_test");
 ```
 
