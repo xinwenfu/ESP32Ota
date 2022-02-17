@@ -31,14 +31,14 @@ git clone https://github.com/xinwenfu/ota.git
    - Choose a directory with existing Arduino IDE project: Places -> iot -> Documents -> ota
    - Click the button *Import*
 
+# Flashing the board for the first time
+
 4. Update the file `wifi_credentials.h` with your SSID and PASSWORD.
 
 ```
 #define SSID "YOUR_SSID"
 #define PASSWORD "YOUR_PASSWORD"
 ```
-# Flashing the board for the first time
-
 5. Compile the project
 
 6. Upload the firmware USB
