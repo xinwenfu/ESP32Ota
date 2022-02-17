@@ -75,6 +75,7 @@ upload_port = 192.168.1.7 ; Change the IP to IP of the ESP32 board
 
 Notes:
 Click the image to watch the original demo video.
+
 [![Demo Video](https://img.youtube.com/vi/_bMsrxiyuHs/0.jpg)](https://www.youtube.com/watch?v=_bMsrxiyuHs)
 
 In the Arduino IDE, once the sketch is running you can go to "Tools" -> "Ports" and you should find your ESP32 listed as "esp_test". You can change the name of your device by changing this line of code:
