@@ -55,7 +55,7 @@ git clone https://github.com/xinwenfu/ota.git
 9. Change the code, e.g, the frequency of the LED light blinking so that we will upload the new firmware to the board
 
 10. In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
-   - Optionally, unplug the micro USB cable from the computer and plug it into another USB port 
+    - Optionally, unplug the micro USB cable from the computer and plug it into another USB port 
 
 ```
 ; PlatformIO Project Configuration File
@@ -79,7 +79,7 @@ upload_port = 192.168.1.7 ; Change the IP to IP of the ESP32 board
 ```
 
 9. Compile the project 
-10. Upload the firmware via OTA. You shall see a different uploading process  from the uploading process via USB
+10. Upload the firmware via OTA. You shall see a different uploading process from the uploading process via USB
 
 
 Notes:
