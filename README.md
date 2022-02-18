@@ -4,9 +4,9 @@ This project demonstrates how to use the Over The Air (OTA) update system on an 
 
 
 # Setup
-0. If needed, Change Ubuntu VM to use the briadged adaptor
+1. If needed, Change Ubuntu VM to use the briadged adaptor
 
-1. If needed, open a terminal in Ubuntu. Type the following command to install networking tools for Ubuntu
+2. If needed, open a terminal in Ubuntu. Type the following command to install networking tools for Ubuntu
 ```
 sudo apt install net-tools
 ```
@@ -15,7 +15,7 @@ Now we can check the IP address of Ubuntu with the following command
 sudo ifconfig
 ```
 
-2. Clone this GitHub project within a folder at the Ubuntu VM.
+3. Clone this GitHub project within a folder at the Ubuntu VM.
 
 For example, the following commands in a terminal clone the GitHub project to ~/home/iot/Documents
 
@@ -24,7 +24,7 @@ cd ~/Documents
 git clone https://github.com/xinwenfu/ota.git
 ```
 
-3. Open VS Code and import this GitHub project, which is an Arduino project
+4. Open VS Code and import this GitHub project, which is an Arduino project
    - Click the PlatformIO icon
    - Click QUICK ACCESS -> PIO Home -> Open
    - Click *Import Arduino Project*
@@ -34,28 +34,28 @@ git clone https://github.com/xinwenfu/ota.git
 
 # Flashing the board for the first time
 
-4. Update the file `wifi_credentials.h` with your SSID and PASSWORD.
+5. Update the file `wifi_credentials.h` with your SSID and PASSWORD.
 
 ```
 #define SSID "YOUR_SSID"
 #define PASSWORD "YOUR_PASSWORD"
 ```
-5. Compile the project
+6. Compile the project
 
-6. Upload the firmware USB
+7. Upload the firmware USB
    - First installation of the firmware will need to be over USB. The code is written with the functionality of OTA and it shall be flashed into the ESP32 board running and waiting for later OTA requests.
    - Press the BOOT button (IO0) of the ESP32 board if needed during uploading
 
-7. The firmware blinks the blue LED on the board
+8. The firmware blinks the blue LED on the board
    - The ESP32 board is ready for upgrading through OTA if the blue LED on the board blinks
 
-8. Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP address of the board
+9. Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP address of the board
 
 # OTA
 
-9. Change the code, e.g, the frequency of the LED light blinking so that we will upload the new firmware to the board
+10. Change the code, e.g, the frequency of the LED light blinking so that we will upload the new firmware to the board
 
-10. In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
+11. In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
     - Optionally, unplug the micro USB cable from the computer and plug it into another USB port. The purpose is to show we will not need upload the firmware via USB. 
 
 ```
