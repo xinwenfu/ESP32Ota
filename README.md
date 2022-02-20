@@ -4,9 +4,9 @@ This project demonstrates how to use the Over The Air (OTA) update system on an 
 
 
 # Setup
-1. If not configured, configure Ubuntu VM to use the briadged adaptor
+1. [Optional] If not configured, configure Ubuntu VM to use the briadged adaptor
 
-2. If not installed, open a terminal in Ubuntu, and type the following command to install networking tools
+2. [Optional] If not installed, open a terminal in Ubuntu, and type the following command to install networking tools
 ```
 sudo apt install net-tools
 ```
