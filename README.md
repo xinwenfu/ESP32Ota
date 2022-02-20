@@ -34,7 +34,7 @@ where # indicates the rest of the line is comment.
    - Choose a directory with existing Arduino IDE project: Places -> iot -> Documents -> ota
    - Click the button *Import*
 
-# Flashing the board for the first time
+# Flashing the board for the first time via micro USB
 
 5. Update the file `wifi_credentials.h` with your SSID and PASSWORD.
 
@@ -53,7 +53,7 @@ where # indicates the rest of the line is comment.
 
 9. Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP address of the board
 
-# OTA
+# OTA via WiFi
 
 10. Change the code, e.g, the frequency of the LED light blinking so that we will upload the new firmware to the board
 
