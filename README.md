@@ -1,6 +1,6 @@
 # OTA via WiFi on ESP32
 
-This project demonstrates how to use the Over The Air (OTA) update system on an ESP32 board.
+This project demonstrates how to use the Over The Air (OTA) update system on an ESP32 board. It also shows the dange of OTA without security. If security is not considered for OTA, an adversary may inject a malicious firmware into a victim device through the OTA.
 
 
 # Setup
