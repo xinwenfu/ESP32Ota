@@ -55,7 +55,14 @@ where # indicates the rest of the line is comment.
 
 # OTA via WiFi
 
-10. Change the code, e.g, the frequency of the LED light blinking so that we will upload the new firmware to the board
+10. Change the code, e.g, the frequency of the LED light blinking so that we will upload the new firmware to the board. In the code snippet below, the *delay* function controls the frequency of the blinking.
+
+```
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(2000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(2000);                       // wait for a second
+```
 
 11. In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
     - Optionally, unplug the micro USB cable from the computer and plug it into another USB port. The purpose is to show we will not need upload the firmware via USB. 
