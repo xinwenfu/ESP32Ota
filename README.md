@@ -36,7 +36,7 @@ where # indicates the rest of the line is comment.
 
 # Flashing the board for the first time via micro USB
 
-5. Update the file `wifi_credentials.h` with your SSID and PASSWORD.
+5. Within VS Code, update the file `wifi_credentials.h` with your SSID and PASSWORD. 
 
 ```
 #define SSID "YOUR_SSID"
