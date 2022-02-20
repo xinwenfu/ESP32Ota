@@ -28,10 +28,10 @@ where # indicates the rest of the line is comment.
 
 4. Open VS Code and import this GitHub project, which is an Arduino project
    - Click the PlatformIO icon
-   - Click QUICK ACCESS -> PIO Home -> Open
+   - Click *QUICK ACCESS* -> *PIO Home* -> *Open*
    - Click *Import Arduino Project*
-   - Select a board: Espressif ESP32 Dev Module
-   - Choose a directory with existing Arduino IDE project: Places -> iot -> Documents -> ota
+   - Select a board: *Espressif ESP32 Dev Module*
+   - *Choose a directory with existing Arduino IDE project*: *Places* -> *iot* -> *Documents* -> *ota*
    - Click the button *Import*
 
 # Flashing the board for the first time via micro USB
