@@ -4,9 +4,9 @@ This project demonstrates how to use the Over The Air (OTA) update system on an 
 
 
 # Setup
-1. If needed, Change Ubuntu VM to use the briadged adaptor
+1. If not confifured, Change Ubuntu VM to use the briadged adaptor
 
-2. If needed, open a terminal in Ubuntu. Type the following command to install networking tools for Ubuntu
+2. If not installed, open a terminal in Ubuntu, and type the following command to install networking tools
 ```
 sudo apt install net-tools
 ```
@@ -17,10 +17,11 @@ sudo ifconfig
 
 3. Clone this GitHub project within a folder at the Ubuntu VM.
 
-For example, the following commands in a terminal clone the GitHub project to ~/home/iot/Documents
+For example, the following commands in a terminal delete the old ota folder and clone the GitHub project to /home/iot/Documents
 
 ```
 cd ~/Documents
+rm -rf ota
 git clone https://github.com/xinwenfu/ota.git
 ```
 
