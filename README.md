@@ -24,6 +24,7 @@ cd ~/Documents                                  # change to the folder Documents
 rm -rf ota                                      # delete the old ota folder
 git clone https://github.com/xinwenfu/ota.git   # clone the github repository
 ```
+where # indicates the rest of the line is comment
 
 4. Open VS Code and import this GitHub project, which is an Arduino project
    - Click the PlatformIO icon
