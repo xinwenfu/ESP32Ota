@@ -44,7 +44,7 @@ where # indicates the rest of the line is comment.
 ```
 6. Compile the project
 
-7. Upload the firmware USB
+7. Upload the firmware via USB
    - First installation of the firmware will need to be over USB. The code is written with the functionality of OTA and it shall be flashed into the ESP32 board running and waiting for later OTA requests.
    - Press the BOOT button (IO0) of the ESP32 board if needed during uploading
 
