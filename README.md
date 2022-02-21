@@ -88,8 +88,8 @@ upload_protocol = espota ; Upload via OTA.
 upload_port = 192.168.1.7 ; Change the IP to IP of the ESP32 board
 ```
 
-9. Compile the project 
-10. Upload the firmware via OTA. You shall see a different uploading process from the uploading process via USB
+12. Compile the project 
+13. Upload the firmware via OTA. You shall see a different uploading process from the uploading process via USB
 
 
 Notes:
