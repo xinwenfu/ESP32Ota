@@ -17,7 +17,7 @@ sudo ifconfig
 
 3. Clone this GitHub project within a folder at the Ubuntu VM.
 
-For example, the following commands in a terminal delete the old ota folder and clone the GitHub project to /home/iot/Documents
+For example, the following commands in a terminal delete the old *ota* folder and clone the GitHub project to */home/iot/Documents*
 
 ```
 cd ~/Documents                                  # change to the folder Documents within the home folder
