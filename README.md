@@ -65,7 +65,7 @@ where # indicates the rest of the line is comment.
 ```
 
 11. In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
-    - Optionally, unplug the micro USB cable from the computer and plug it into another USB port. The purpose is to show we will not need upload the firmware via USB. 
+    - Optionally, unplug the micro USB cable from the computer and plug it into another USB port. The purpose is to show we do not need to upload the firmware via USB now. 
 
 ```
 ; PlatformIO Project Configuration File
