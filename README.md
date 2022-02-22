@@ -44,8 +44,8 @@ where # indicates the rest of the line is comment.
 ```
 6. Compile the project
 
-7. Upload the firmware via USB
-   - First installation of the firmware will need to be over USB. The code is written with the functionality of OTA and it shall be flashed into the ESP32 board running and waiting for later OTA requests.
+7. Upload the firmware via micro USB
+   - First installation of the firmware will need to be over micro USB. The code is written with the functionality of OTA and it shall be flashed into the ESP32 board running and waiting for later OTA requests.
    - Press the BOOT button (IO0) of the ESP32 board if needed during uploading
 
 8. The firmware blinks the blue LED on the board
@@ -65,7 +65,7 @@ where # indicates the rest of the line is comment.
 ```
 
 11. In platformio.ini, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
-    - Optionally, unplug the micro USB cable from the computer and plug it into another USB port. The purpose is to show we do not need to upload the firmware via USB now. 
+    - Optionally, unplug the micro USB cable from the computer and plug it into another USB port. The purpose is to show we do not need to upload the firmware via micro USB now. 
 
 ```
 ; PlatformIO Project Configuration File
@@ -89,7 +89,7 @@ upload_port = 192.168.1.7 ; Change the IP to IP of the ESP32 board
 ```
 
 12. Compile the project 
-13. Upload the firmware via OTA. You shall see a different uploading process from the uploading process via USB
+13. Upload the firmware via OTA. You shall see a different uploading process from the uploading process via micro USB
 
 
 Notes:
