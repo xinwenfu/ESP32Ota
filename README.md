@@ -82,10 +82,10 @@ where # indicates the rest of the line is comment.
 platform = espressif32
 board = esp32dev
 framework = arduino
-monitor_speed = 115200
+monitor_speed = 115200     ; The serial monitor speed must be right to see the output
 
-upload_protocol = espota ; Upload via OTA. 
-upload_port = 192.168.1.7 ; Change the IP to IP of the ESP32 board
+upload_protocol = espota   ; Upload via OTA. 
+upload_port = 192.168.1.7  ; Change the IP to IP of the ESP32 board
 ```
 
 12. Compile the project 
