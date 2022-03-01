@@ -46,7 +46,7 @@ where # indicates the rest of the line is comment.
 
 7. Upload the firmware via micro USB
    - First installation of the firmware will need to be over micro USB. The code is written with the functionality of OTA and it shall be flashed into the ESP32 board running and waiting for later OTA requests.
-   - Press the BOOT button (IO0) of the ESP32 board if needed during uploading
+   - Press and hold the BOOT button (IO0) of the ESP32 board until ulpadoing starts if needed during uploading
 
 8. The firmware blinks the blue LED on the board
    - The ESP32 board is ready for upgrading through OTA if the blue LED on the board blinks
