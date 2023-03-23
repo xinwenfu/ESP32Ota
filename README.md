@@ -55,7 +55,7 @@ where # indicates the rest of the line is comment.
 
 # OTA via WiFi
 
-10. Change the code, e.g, the frequency of the LED light blinking so that we will upload the new firmware to the board. In the code snippet below, the *delay* function controls the frequency of the blinking.
+10. Change the code, e.g, the frequency of the LED light blinking. In the code snippet below, the *delay* function controls the frequency of the blinking.
 
 ```
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
