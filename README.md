@@ -43,16 +43,26 @@ This project demonstrates how to use the Over The Air (OTA) update system on an 
    #define SSID "YOUR_SSID"
    #define PASSWORD "YOUR_PASSWORD"
    ```
-2. Build the project.
-
-3. Upload the firmware via micro USB.
+2. Modify the configuration to support OTA
+   1. Configure Factory and two OTA partitions
+      ```sh
+      # Partition Table -> Partition Table -> Factory app, two OTA definitions
+      idf.py menuconfig
+      ```
+   2. Configure flash memory
+      ```sh
+      # Serial flasher config -> Flash size -> 4 MB
+      idf.py menuconfig
+      ```
+3. Build the project.
+4. Upload the firmware via micro USB.
    - The first installation of the firmware will need to be over the micro USB cable. The code that is built contains OTA functionality and once flashed into the SaTC ESP32 PCB board will be running and waiting for later OTA requests.
    - Press and hold the BOOT button (IO0) of the ESP32 board until the upload starts, in some cases this may not be needed.
 
-4. The newly uploaded firmware blinks the blue LED on the board at a regular interval.
+5. The newly uploaded firmware blinks the blue LED on the board at a regular interval.
    - The ESP32 board is ready for upgrading through OTA if the blue LED on the board blinks
 
-5. Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP address of the board
+6. Use the Serial Monitor to see the output from the ESP board firmware, which prints out the IP address of the board
 
 ## OTA via WiFi
 
@@ -64,38 +74,19 @@ This project demonstrates how to use the Over The Air (OTA) update system on an 
    digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
    delay(1000);                       // wait for a second
    ```
-
-2. In the platformio.ini file, specify the upload_protocol and upload_port, which is the ip address of the board. One example platformio.ini looks like the following. Pay attention to the last two lines.
-    - Optionally, unplug the micro USB cable from the computer and plug it into another USB port. The purpose is to show we do not need to upload the firmware via micro USB now. 
-
-   ```conf
-   ; PlatformIO Project Configuration File
-   ;
-   ;   Build options: build flags, source filter
-   ;   Upload options: custom upload port, speed and extra flags
-   ;   Library options: dependencies, extra library storages
-   ;   Advanced options: extra scripting
-   ;
-   ; Please visit documentation for the other options and examples
-   ; https://docs.platformio.org/page/projectconf.html
-
-   [env:esp32dev]
-   platform = espressif32
-   board = esp32dev
-   framework = arduino
-
-   monitor_speed = 115200     ; The serial monitor speed must be right to see the output
-   upload_protocol = espota   ; Upload via OTA. 
-   upload_port = 192.168.1.7  ; Change the IP to IP of the ESP32 board
+2. Build the project.
+3. Upload the firmware via OTA using the ``` compoents/arduino/tools/espota.py ``` tool. The command is shown below
    ```
-
-3. Build the project.
-4. Upload the firmware via OTA. You will see a different uploading process from the uploading process via micro USB
+   # Be careful of firewall issues blocking the communication
+   ./espota.py -i [INSERT-ESP-IP] -f path/to/build/file.bin
+   ```
+   * This will fail if you have a firewall blocking packets, or are not using a Bridged Network adapter!
+4.  Notice the different uploading process from the uploading process via micro USB
 
 
 ## Notes
 
-This project is based on https://github.com/atomic14/ESP32Ota.
+This project is based on https://github.com/atomic14/ESP32Ota. 
 Click the image to watch the original demo video with Arduino IDE.
 
 [![Demo Video](https://img.youtube.com/vi/_bMsrxiyuHs/0.jpg)](https://www.youtube.com/watch?v=_bMsrxiyuHs)
