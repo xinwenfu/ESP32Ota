@@ -1,15 +1,27 @@
 #include <ArduinoOTA.h>
 #define LED_BUILTIN 2
-#include "wifi_credentials.h"
 
 IPAddress ip;
 
+// Wifi Defines
+// WIFI Defines
+// These are from the station example reference linked to at the wifi function comment
+/* The examples use WiFi configuration that you can set via project configuration menu
+   If you'd rather not, just change the below entries to strings with
+   the config you want - ie #define EXAMPLE_WIFI_SSID "mywifissid"
+*/
+#define EXAMPLE_ESP_WIFI_SSID CONFIG_ESP_WIFI_SSID
+#define EXAMPLE_ESP_WIFI_PASS CONFIG_ESP_WIFI_PASSWORD
+// End WIFI
+
+
 void setup() {
+  Serial.setRxBufferSize(2048);
   Serial.begin(115200);
   Serial.printf("Started up\n");
 
   WiFi.mode(WIFI_STA);
-  WiFi.begin(SSID, PASSWORD);
+  WiFi.begin(CONFIG_ESP_WIFI_SSID, CONFIG_ESP_WIFI_PASSWORD);
   while (WiFi.waitForConnectResult() != WL_CONNECTED)
   {
     Serial.println("Connection Failed! Rebooting...");
@@ -56,13 +68,14 @@ void setup() {
 
 void loop() {
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);                       // wait for a second
+  delay(1500);                       // wait for a second
   digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);                       // wait for a second
+  delay(1500);                       // wait for a second
 
   Serial.printf("IP address of this esp32 board:");
   ip = WiFi.localIP();
   Serial.println(ip);
+  Serial.println("Change Now!");
   
   ArduinoOTA.handle();
 }
