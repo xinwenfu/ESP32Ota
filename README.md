@@ -18,11 +18,9 @@ This project demonstrates how to use the Over The Air (OTA) update system on an 
    ```
 
 3. Clone this GitHub project to a folder on the Ubuntu VM.
-
-   For example, the following commands are executed in a terminal will clone this GitHub project to */home/iot/Documents*
+   **Note**: By default, this project is already located in the ``` ~/esp/IoT-Examples/ ``` directory of the Ubuntu VM.
 
    ```sh
-   cd ~/Documents                                  # Change to the folder Documents within the home folder
    git clone https://github.com/xinwenfu/ota.git   # Clone the GitHub repository
    ```
    The # symbol indicates the rest of the line is comment.
