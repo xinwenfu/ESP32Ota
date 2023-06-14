@@ -1,0 +1,4 @@
+[submodule "v5.xc1"]
+	path = components/arduino
+	url = https://github.com/espressif/arduino-esp32.git
+	branch = esp-idf-v5.1-libs
