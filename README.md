@@ -52,7 +52,7 @@ This project demonstrates how to use the Over The Air (OTA) update system on an 
 The following instructions should be done within the *project repository* ``` ota ```. Additionally if you downloaded this repository correctly **steps 1, 2, and 3 will already have been done for you**. When using the *provided VM* all of this has already been done for you.
 
 
-**Notice**: When running a project with the arduino core for the first time the ``` idf.py ``` commands will *fail*. We need to edit the generated SDKCONFIG to increase the ``` CONFIG_FREERTOS_HZ ``` value.
+**Notice**: When running a project with the arduino core for the first time the ``` idf.py ``` commands will *fail*. We need to edit the generated SDKCONFIG to increase the ``` CONFIG_FREERTOS_HZ ``` value. You may have to do this with a text editor such as nano using ``` nano sdkconfig ```.
 ``` 
 # Before 
 CONFIG_FREERTOS_HZ=100
