@@ -138,8 +138,10 @@ CONFIG_FREERTOS_HZ=1000
    delay(1000);                       // wait for a second
    ```
 2. Build the project.
-3. Upload the firmware via OTA using the ``` components/arduino/tools/espota.py ``` tool. The command is shown below (We assum this is ran from the directory containing the espota.py)
+3. Upload the firmware via OTA using the ``` components/arduino/tools/espota.py ``` tool. The command is shown below (We assume this is ran from the directory containing the espota.py)
    ```
+   # Enter the arduino tools directory
+   cd components/arduino/tools
    # Be careful of firewall issues blocking the communication
    ./espota.py -d -i [INSERT-ESP-IP] -f path/to/build/file.bin
    ```
