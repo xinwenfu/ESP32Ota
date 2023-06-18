@@ -66,7 +66,7 @@ CONFIG_FREERTOS_HZ=1000
     cd components && \                                            # Enter into components folder                                           
     git clone https://github.com/espressif/arduino-esp32 arduino  # Clone arduino core
     ```
-2. Enter into the ESP-Display directory 
+2. Enter into the component arduino library
     ```sh
     cd components/arduino 
     ```
