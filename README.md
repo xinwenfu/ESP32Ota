@@ -63,8 +63,8 @@ CONFIG_FREERTOS_HZ=1000
 
 1. Now **Install** the [arduino-esp library](https://github.com/espressif/arduino-esp32) into a folder named arduino
     ```sh
-    cd components && \                                            # Enter into components folder                                           
-    git clone https://github.com/espressif/arduino-esp32 arduino  # Clone arduino core
+    # Clone into arduino-esp32 repository into a directory ./components/arduino
+    git clone https://github.com/espressif/arduino-esp32 components/arduino  # Clone arduino core
     ```
 2. Enter into the component arduino library
     ```sh
@@ -82,18 +82,22 @@ CONFIG_FREERTOS_HZ=1000
     # After
     set(requires spi_flash mbedtls mdns wifi_provisioning wpa_supplicant esp_adc esp_eth http_parser esp_partition)
     ``` 
-5. Enabled backwards compatibility within FREERTOS
+5. Move back to the *ota* project directory, otherwise the menuconfig will not work.
+    ```sh
+    cd ../..
+    ```
+6. Enabled backwards compatibility within FREERTOS
     ```sh
     # compoent config -> FreeRtos -> Kernel -> configENABLE_BACKWARDS_COMPATIBILITY 
     idf.py menuconfig 
     ```
-6.  Enable Enable pre-shaired-cipher suites 
+7.  Enable Enable pre-shaired-cipher suites 
     ```sh
     #  Component config -> mbedTLS -> TLS Key Exchange Methods -> Enable pre shared-key ciphersuites
     #  Component config -> mbedTLS -> TLS Key Exchange Methods -> Enable PSK based ciphersuite modes
     idf.py menuconfig   
     ```
-7. Add necessary component dependency
+8. Add necessary component dependency
     ```sh
     idf.py add-dependency "espressif/mdns^1.1.0"
     ```
