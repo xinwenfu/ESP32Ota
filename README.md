@@ -1,9 +1,9 @@
 # Basic OTA via WiFi on ESP32
 
-This project demonstrates how to use the Over The Air (OTA) update system on an ESP32 board. It also shows the danger of OTA without security. If security is not considered for the OTA, an adversary may inject a malicious firmware into a victim device through the OTA. For secure OTA updates through https, refer to [Get Started With Secure ESP32 OTA through HTTPS](https://github.com/PBearson/Get-Started-With-ESP32-OTA).
+This project demonstrates how to use the Over The Air (OTA) update system on an ESP32 board. It also shows the danger of OTA updates without security. If security is not considered for the OTA update system, an adversary may inject malicious firmware into a victim device through an OTA update. For secure OTA updates through https, refer to the [Get Started With Secure ESP32 OTA through HTTPS](https://github.com/PBearson/Get-Started-With-ESP32-OTA) lab.
 
 
-## Setup
+## Setup (Optional)
 1. If it is not already configured, It is necessary to configure the Ubuntu VM to use the bridged adaptor. This can be changed using the steps below
    * VirtualBox Manager -> Ubuntu IoT -> Settings -> Network -> Adapter 1 -> Bridged Adapter
 
@@ -30,29 +30,30 @@ This project demonstrates how to use the Over The Air (OTA) update system on an 
    - Click *Open Folder* 
    - Click on the *ota* directory that we cloned
 
-### ESP-IDF Setup
-1. Enter into the esp-idf directory or install [esp-idf](https://github.com/espressif/esp-idf)
+### ESP-IDF Setup (Optional)
+1. Enter into the esp-idf directory or install the v5.1 release [esp-idf](https://docs.espressif.com/projects/esp-idf/en/v5.1/esp32/get-started/index.html#installation)
     ```sh
     # Installing ESP-IDF
-    cd ~ && \                                           # Enter into the home directory
-    mkdir esp && \                                      # Create esp folder
-    cd esp && \                                         # Enter into the esp folder
-    git clone https://github.com/espressif/esp-idf.git  # Clone esp-idf
+    cd ~ && \                                                           # Enter into the home directory
+    mkdir esp && \                                                      # Create esp folder
+    cd esp && \                                                         # Enter into the esp folder
+    git clone -b release/v5.1 https://github.com/espressif/esp-idf.git  # Clone esp-idf
     ```
-2. Switch the esp-idf repository to release version 5.1 
+2. If ESP-IDF is already installed switch the esp-idf repository to release version 5.1 
     ```sh 
     git switch release/v5.1
     ```
 3. Run the install script located in the newly cloned ``` esp-idf ``` repository
-    ```sh 
+    ```sh
+    # This is inside the esp-idf directory
     ./install.sh
     ```
 
 ### Arduino component setup
-The following instructions should be done within the *project repository* ``` ota ```. Additionally if you downloaded this repository correctly **steps 1, 2, and 3 will already have been done for you**. When using the *provided VM* all of this has already been done for you.
+The following instructions should be done within the *project repository* ``` ota ```. Additionally, if you downloaded this repository correctly **steps 1, 2, and 3 will already have been done for you**. When using the *provided VM* all of this has already been done for you.
 
 
-**Notice**: When running a project with the arduino core for the first time the ``` idf.py ``` commands will *fail*. We need to edit the generated SDKCONFIG to increase the ``` CONFIG_FREERTOS_HZ ``` value. You may have to do this with a text editor such as nano using ``` nano sdkconfig ```.
+**Notice**: When running a project with the Arduino core for the first time, the ``` idf.py ``` commands will *fail*. We need to edit the generated SDKCONFIG to increase the ``` CONFIG_FREERTOS_HZ ``` value. You may have to do this with a text editor such as nano using ``` nano sdkconfig ```.
 ``` 
 # Before 
 CONFIG_FREERTOS_HZ=100
@@ -104,7 +105,7 @@ CONFIG_FREERTOS_HZ=1000
 
 ## Flashing the board for the first time via micro USB
 
-1. Using the button located at the bottom of VS Code or a esp-idf terminal and the ``` idf.py menuconfig ``` command edit the SSID and Password 
+1. Use the button located at the bottom of VS Code or a esp-idf terminal and the ``` idf.py menuconfig ``` command edit the SSID and Password 
    ```
    # Example Configuration -> WIFI_SSID
    # Example Configuration -> WIFI_PASSWORD
