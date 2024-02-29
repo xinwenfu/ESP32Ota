@@ -3,7 +3,7 @@
 This project demonstrates how to use the Over The Air (OTA) update system on an ESP32 board. It also shows the danger of OTA updates without security. If security is not considered for the OTA update system, an adversary may inject malicious firmware into a victim device through an OTA update. For secure OTA updates through https, refer to the [Get Started With Secure ESP32 OTA through HTTPS](https://github.com/PBearson/Get-Started-With-ESP32-OTA) lab.
 
 
-## Setup (Optional)
+## Setup 
 1. If it is not already configured, It is necessary to configure the Ubuntu VM to use the bridged adaptor. This can be changed using the steps below
    * VirtualBox Manager -> Ubuntu IoT -> Settings -> Network -> Adapter 1 -> Bridged Adapter
 
